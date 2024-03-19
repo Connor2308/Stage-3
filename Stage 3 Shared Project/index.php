@@ -28,14 +28,12 @@
         </div>
     </div>
     <div class="content">
-        <div class="form">
-            <h2>Login</h2>
-            <input type="email" name="" placeholder="Username">
-            <input type="email" name="" placeholder="Password">
-            <button class="btn"><a href="#">Login</a></button>
-            <p class="link">Don't have a account</p><br>
-            <a href="#">Register</a><p class="liw">Login with</p>
-        </div>
+        <div class="map"></div>
+        <script>(g=>{var h, a, k, p="Hotels maps API",c="google",l="importLibary",q="__ib__", m=document, b=window ;b=b[c]||(b[c]={});var d=b.maps={})
+        ,r=new Set, e=new URLSearchParams, u=()=>h||h=new Promise(async(f,n)=>
+         {await (a=m.createElement("script"));e.set("libaries",[...r]+"");
+         for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps" +q);a.scr="#",
+             :g):d=[l]=f=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})</script>
     </div>
     <footer id="footer" class="footer-text-center">
         <div class="panel">
