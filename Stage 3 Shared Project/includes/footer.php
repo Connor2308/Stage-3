@@ -7,6 +7,7 @@
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Security Policy</a></li>
                 <li><a href="#">Site Map</a></li>
+                <li><a href="About.php">About Us</a></li>
             </ul>
             <ul>
                 <li><div>&copy; <?php echo "Group 12 20$year";?></div><li>
