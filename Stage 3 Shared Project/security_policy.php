@@ -23,7 +23,9 @@
         
     </div>
         <div class="content">
-           
+           <h2>Data Protection</h2>
+            <p>The latest technologies including data encryption are used to safeguard the data submitted 
+                <br> and strict security standards are maintained to prevent unauthorised access.</p>
         </div>
         <?php include("includes/footer.php")?>
 </body>
