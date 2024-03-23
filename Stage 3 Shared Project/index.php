@@ -41,7 +41,7 @@
             <script>(g=>{var h, a, k, p="Hotels maps API",c="google",l="importLibary",q="__ib__", m=document, b=window ;b=b[c]||(b[c]={});var d=b.maps={})
             ,r=new Set, e=new URLSearchParams, u=()=>h||h=new Promise(async(f,n)=>
             {await (a=m.createElement("script"));e.set("libaries",[...r]+"");
-            for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps" +q);a.scr="#",
+            for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps" +q);a.scr="https://www.google.com/maps/place/Kedah,+Malaysia/@5.8117643,99.7142838,9z/data=!3m1!4b1!4m6!3m5!1s0x304976135f4045a1:0x6ce483110aab4ea4!8m2!3d6.0498656!4d100.5296115!16zL20vMDF4bDQ2?authuser=0&entry=ttu",
                 :g):d=[l]=f=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})</script>
         </div>
         <?php include("includes/footer.php")?>
