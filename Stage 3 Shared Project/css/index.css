@@ -131,12 +131,14 @@ ul li a :hover{
 .table-container{
     display: flex;
     justify-content: center;
+    
 }
 table{
     width: 100%;
     max-width: 600px;
     min-width: 300px;
     padding: 5%;
+    padding-top: 10%;
 }
   
 th,td{

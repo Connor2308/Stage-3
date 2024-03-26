@@ -2,7 +2,7 @@
 require_once("config.php");
 //query to get all hotels
 $queryHotels = "SELECT * FROM hotelandhomestays";
-$resultHotels = $mysqli->query( $queryHotels );
+$resultHotels = $conn->query($queryHotels);
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,6 @@ $resultHotels = $mysqli->query( $queryHotels );
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <title>National Water Research Institute</title>
     <link rel="stylesheet" href="css/mobile.css" />
     <link
@@ -25,17 +24,25 @@ $resultHotels = $mysqli->query( $queryHotels );
         <!-- Hotel Listing Here -->
         <div class="table-container">
             <table>
-            <tr>
-            <th>Hotel</th>
-            <th>Hotel Address</th>
-            <th>Region</th>
-            </tr>
+                <tr>
+                    <th>Hotel ID</th>
+                    <th>Hotel</th>
+                    <th>Hotel Address</th>
+                    <th>Region</th>
+                    <th>Business Type</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
             <?php
             while ($obj = $resultHotels -> fetch_object()) {
             echo "<tr>";
-            echo "<td>{$obj->hotel_name}</a></td>";
-            echo "<td>{$obj->street_address}</td>";
-            echo "<td>&pound; {$obj->region}</td>";
+            echo "<td><a>{$obj->hotel_id}</a></td>";
+            echo "<td><a>{$obj->hotel_name}</a></td>";
+            echo "<td><a>{$obj->street_address}</a></td>";
+            echo "<td><a>{$obj->region}</a></td>";
+            echo "<td><a>{$obj->business_type}</a></td>";
+            echo "<td><a>{$obj->latitude}</a></td>";
+            echo "<td><a>{$obj->longitude}</a></td>";
             echo "</tr>";
             }
             ?>
