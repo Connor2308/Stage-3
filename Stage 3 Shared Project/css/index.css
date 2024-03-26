@@ -127,4 +127,33 @@ ul li a :hover{
     color: #fff;
     position: relative;
 }
+/* Table */
+.table-container{
+    display: flex;
+    justify-content: center;
+}
+table{
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 5%;
+}
+  
+th,td{
+    padding: 10px 4px;
+    text-align: left;
+}
+  
+th{
+    text-transform: uppercase;
+    border-bottom: 4px solid #000;
+    background-color: #fff;
+}
+  
+tr:nth-child(odd) {
+    background-color: #ccc;
+}
+.uc{
+    text-transform: uppercase;
+}
 
