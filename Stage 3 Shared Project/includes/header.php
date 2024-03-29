@@ -1,5 +1,5 @@
 <header class="header">
-  <a href="#" class="logo">NAHRIM</a>
+  <a href="index.php" class="logo">NAHRIM</a>
   <nav class="navbar">
     <a href="index.php">Map</a>
     <a href="hotels.php">Hotels</a>
