@@ -15,11 +15,7 @@
 <body>
     <div class="main">
         <?php include("includes/header.php")?>
-        <div class="icon">
-            <div class="logo">
-                <img src="images/logo_jata_2022_en.png">
-            </div>
-        </div>
+        
       
     </div>
         <div class="content">
