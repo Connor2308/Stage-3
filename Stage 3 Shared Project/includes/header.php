@@ -6,12 +6,10 @@
     <a href="index.php" class="logo-link"><img src="images/logonahrimwebsite.png" alt="Logo represents NAHRIM" class="logo"></a>
     <nav class="navbar">
       <div class="nav-container">
-      <a href="index.php">Map</a>
+      <a href="map.php">Map</a>
       <a href="hotels.php">Hotels</a>
   </nav>
 </header>
-
-
 
 
 
