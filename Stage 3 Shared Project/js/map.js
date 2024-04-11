@@ -20,5 +20,13 @@ async function initMap(){
     });
 
 }
+function search() {
+    var searchText = document.getElementById('searchInput').value;
+    searchHotelsHomestays(searchText);
+}
+
+function searchHotelsHomestays(query) {
+    alert('Searching for: ' + query);
+}
 
 initMap();
