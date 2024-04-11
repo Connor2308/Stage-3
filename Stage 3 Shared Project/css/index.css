@@ -144,6 +144,8 @@ table{
 th,td{
     padding: 10px 4px;
     text-align: left;
+    border-style: solid;
+    border-color: #000;
 }
   
 th{
