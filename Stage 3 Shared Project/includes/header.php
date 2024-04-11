@@ -14,5 +14,4 @@
       <button class="btn" onclick="search()">Search</button>
     </div>
   </div>
-  <script src="map.js"></script>
 </header>

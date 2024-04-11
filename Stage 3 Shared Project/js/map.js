@@ -1,14 +1,14 @@
 let map;
 
 async function initMap() {
-  // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 };
+  // The location of malaysia
+  const position = { lat: 5.49371, lng: 99.12556 };
   // Request needed libraries.
   //@ts-ignore
-  const { Map } = await google.maps.importLibrary("map");
+  const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  // The map, centered at Uluru
+  // The map, centered at malaysia
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
@@ -19,7 +19,7 @@ async function initMap() {
   const marker = new AdvancedMarkerElement({
     map: map,
     position: position,
-    title: "Uluru",
+    title: "Malaysia",
   });
 }
 
