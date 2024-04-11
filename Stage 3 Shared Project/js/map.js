@@ -10,7 +10,7 @@ async function initMap() {
 
   // The map, centered at malaysia
   map = new Map(document.getElementById("map"), {
-    zoom: 4,
+    zoom: 8,
     center: position,
     mapId: "DEMO_MAP_ID",
   });
