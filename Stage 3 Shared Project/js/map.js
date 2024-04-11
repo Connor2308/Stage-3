@@ -1,32 +1,26 @@
 let map;
 
-async function initMap(){
-    const position = {lat: 24.86, lng: 29.19 };
-    
-    const{Map} = await google.maps.importLibary("maps");
-    const{AdvancedMarkerElement} = await google.maps.importLibary("marker");
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: -25.344, lng: 131.031 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("map");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-    map = new Map (document.getElementById("maps"),{
-        zoom: 4,
-        center: position,
-        mapId: "Demo_Map_ID", 
-    });
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
 
-    const marker = new AdvancedMarkerElement({
-        map: map,
-        position: position,
-        title: "Malaysia Hotels",
-
-    });
-
-}
-function search() {
-    var searchText = document.getElementById('searchInput').value;
-    searchHotelsHomestays(searchText);
-}
-
-function searchHotelsHomestays(query) {
-    alert('Searching for: ' + query);
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
 }
 
 initMap();
