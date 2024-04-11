@@ -20,11 +20,8 @@
     </div>
         <div class="content">
         <div class="map"></div>
-            <script>(g=>{var h, a, k, p="Hotels maps API",c="google",l="importLibary",q="__ib__", m=document, b=window ;b=b[c]||(b[c]={});var d=b.maps={})
-            ,r=new Set, e=new URLSearchParams, u=()=>h||h=new Promise(async(f,n)=>
-            {await (a=m.createElement("script"));e.set("libaries",[...r]+"");
-            for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps" +q);a.scr="https://www.google.com/maps/place/Kedah,+Malaysia/@5.8117643,99.7142838,9z/data=!3m1!4b1!4m6!3m5!1s0x304976135f4045a1:0x6ce483110aab4ea4!8m2!3d6.0498656!4d100.5296115!16zL20vMDF4bDQ2?authuser=0&entry=ttu",
-                :g):d=[l]=f=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})</script>
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyD6F17_mmaLHl470cN-mwe8FKPFg_On0-A", v: "weekly"});</script>
         </div>
         <?php include("includes/footer.php")?>
 </body>
