@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <title>National Water Research Institute</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="css/map.css"/>
-    <link rel="stylesheet" href="js/map.js"/>
     <link rel="stylesheet" href="css/mobile.css" />
+    <script type="module" src="js/index.js"></script>
     <link
       rel="stylesheet"
       href="css/index.css"
