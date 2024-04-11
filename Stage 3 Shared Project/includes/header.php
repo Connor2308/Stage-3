@@ -4,7 +4,7 @@
 </div>
 <div class="navlinks">
   <nav class="navbar">
-    <a href="index.php">Map</a>
+    <a href="map.php">Map</a>
     <a href="hotels.php">Hotels</a>
   </nav>
 </div>
