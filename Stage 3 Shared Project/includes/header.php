@@ -20,4 +20,6 @@
     <input class="srch" type="search" id="searchInput" name="search-a-hotel" placeholder="Search">
       <button class="btn" onclick="search()">Search</button>
     </div>
-  </div> -->
+  </div>
+  <script src="map.js"></script>
+</header>
