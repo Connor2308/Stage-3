@@ -12,13 +12,9 @@
 </head>
 <body>
     <div class="main">
-        <?php include("includes/header.php")?>
-        <div class="icon">
-            <div class="logo">
-                <img src="images/logo_jata_2022_en.png">
-            </div>
-        </div>
-       
+        <?php include("includes/header.php")
+        ?>
+        
     </div>
         <div class="content">
           <h2>What is Lorem Ipsum?</h2>
