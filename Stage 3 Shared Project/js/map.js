@@ -7,7 +7,7 @@ let map;
 let markers = [];
 
 async function getWeatherInfo(lat, lon) { // of the current lat and long when this function is called
-  const apiKey = '06b3136375c0542ee73504cb381787b0'; //apis key
+  const apiKey = '06b3136375c0542ee73504cb381787b0'; //api key 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   
   //we use try and catch for error handling just incase some invalid data is entered
@@ -17,31 +17,27 @@ async function getWeatherInfo(lat, lon) { // of the current lat and long when th
       return data; //returning data as the result of the function
   } catch (error) {
       console.error('Error fetching weather data:', error);
-      return null; //herror handling
+      return null; //error handling
   }
 }
 
 async function initMap() {
   // Request needed libraries.
   const { Map, InfoWindow } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
-  // The location of malaysia for centering 
+  const { AdvancedMarkerElement} = await google.maps.importLibrary("marker");
+  // The location of kedah, malaysia for centering 
   const malaysiaPosition = { lat: 5.903295974014964, lng: 100.39410459400102 };
   // The map, centered at malaysia
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 8,
     center: malaysiaPosition,
-    mapId: "DEMO_MAP_ID",
-  });
-  const infoWindow = new google.maps.InfoWindow({
-    content: "",
-    disableAutoPan: true,
+    mapId: "NAHRIM map",
   });
 
   //getting rid of null hotel locations so it does not break
   const validHotels = hotelData.filter(hotel => hotel.lat !== null && hotel.lng !== null);
   
-  //adding the markers to the map
+  //adding the markers to the map, for each hotel in the validhotels variable
   validHotels.forEach(hotel=>{
     const marker = new google.maps.Marker({
       position: {lat: hotel.lat, lng: hotel.lng },
@@ -59,12 +55,12 @@ async function initMap() {
         const temperatureCelsius = weatherData.main.temp;
         const weatherInfo = `Hotel ID: ${hotel.hotelId}<br></br>Weather: ${weatherData.weather[0].description}, Temperature: ${temperatureCelsius.toFixed(2)}°C,`;
         infoWindow.setContent(weatherInfo); //setting the content of the pop up window to the weather and temp
-      } else {
+      } else { //error handling
         infoWindow.setContent('Failed to fetch weather data');
       }
-      infoWindow.open(map, marker);
+      infoWindow.open(map, marker); //open the window
     });
-    markers.push(marker);
+    markers.push(marker);//adding the marks to my array of displayed markers, this is for the clusting functionality
   });
   const MarkerClusterer = new markerClusterer.MarkerClusterer({ markers, map })
 }

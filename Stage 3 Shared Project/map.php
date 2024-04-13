@@ -24,7 +24,7 @@ $resultHotels = $conn->query($queryHotels);
     <div id="map"></div>
     <?php
     echo "<script>";
-    echo "let hotelData = [";
+    echo "let hotelData = ["; //declaring hotel data variable
     while ($row = $resultHotels->fetch_object()) {
       $hotelName = $row->hotel_name;
       $lat = $row->latitude;
