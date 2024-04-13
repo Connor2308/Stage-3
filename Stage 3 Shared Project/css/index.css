@@ -138,7 +138,7 @@ ul li a :hover{
 }
 
 /* Content */
-body {
+.body {
     display: flex;
     justify-content: center; 
     align-items: center; 
@@ -154,7 +154,7 @@ body {
     border: 2px solid #5f98ae;
     padding: 20px; 
     box-sizing: border-box; 
-    margin-top: 10px; /* Adjust the top margin as needed */
+    margin-top: 10px;
 }
 h2{
     font-size: 30px;
@@ -171,7 +171,7 @@ p{
 .table-container{
     display: flex;
     justify-content: center;
-    margin-top: 9000px;
+    margin-top: 0px;
 }
 table{
     width: 100%;

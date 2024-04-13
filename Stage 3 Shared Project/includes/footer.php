@@ -3,11 +3,11 @@
     <?php $year = date("y"); ?>
         <div class="panel">
             <ul>
-                <li><a href="faq.php">FAQs</a></li>
-                <li><a href="privacy_policy.php">Privacy Policy</a></li>
-                <li><a href="security_policy.php">Security Policy</a></li>
+                <li><a href="https://www.motac.gov.my/soalan-lazim">FAQs</a></li>
+                <li><a href="https://www.motac.gov.my/dasar-privasi">Privacy Policy</a></li>
+                <li><a href="https://www.motac.gov.my/dasar-keselamatan">Security Policy</a></li>
                 <li><a href="map.php">Site Map</a></li>
-                <li><a href="About.php">About Us</a></li>
+                <li><a href="https://www.motac.gov.my/">About Us</a></li>
             </ul>
             <ul>
                 <li><div>&copy; <?php echo "Group 12 20$year";?></div><li>
