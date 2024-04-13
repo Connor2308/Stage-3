@@ -33,6 +33,10 @@ async function initMap() {
     center: malaysiaPosition,
     mapId: "NAHRIM map",
   });
+  const infoWindow = new google.maps.InfoWindow({
+    content: "",
+    disableAutoPan: true,
+  });
 
   //getting rid of null hotel locations so it does not break
   const validHotels = hotelData.filter(hotel => hotel.lat !== null && hotel.lng !== null);
