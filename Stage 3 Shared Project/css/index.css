@@ -33,6 +33,7 @@
     flex-direction: column;
     align-items: center;
 
+    z-index: 20;
 }
 .title{
     flex: 1; 
@@ -136,14 +137,33 @@ ul li a :hover{
     color: #ff7200;
 }
 
-
 /* Content */
-.content{
-    width: 120px;
-    height: auto;
-    margin: auto;
-    color: #fff;
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 120vh; 
+    margin: 0; 
+    padding: 0; 
+}
+.content {
+    width: 80%; 
+    color: #000000;
+    text-align: center;
     position: relative;
+    border: 2px solid #5f98ae;
+    padding: 20px; 
+    box-sizing: border-box; 
+    margin-top: 10px; /* Adjust the top margin as needed */
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 0px; 
+}
+p{
+    font-size: 16px; 
+    line-height: 3;
+    margin-bottom: 100px; 
 }
 
 
@@ -151,7 +171,7 @@ ul li a :hover{
 .table-container{
     display: flex;
     justify-content: center;
-    
+    margin-top: 9000px;
 }
 table{
     width: 100%;
