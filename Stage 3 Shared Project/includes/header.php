@@ -1,14 +1,14 @@
 <header class="header">
   <div class="title">
-    <a href="index.php" class="name">NAHRIM</a>
-</div>
-  <nav>
-    <a href="index.php" class="logo-link"><img src="images/logonahrimwebsite.png" alt="Logo represents NAHRIM" class="logo"></a>
+    <a href="#" class="name">NAHRIM Decision Support System for Hotel Location in Malaysia</a>
+  </div>
+    <!-- <a href="#" class="logo-link"><img src="images/logonahrimwebsite.png" alt="Logo represents NAHRIM" class="logo"></a> -->
     <nav class="navbar">
       <div class="nav-container">
-      <a href="map.php">Map</a>
-      <a href="hotels.php">Hotels</a>
-  </nav>
+        <a href="map.php">Map</a>
+        <a href="hotels.php">Hotels</a>
+      </div>
+    </nav>
 </header>
 
 

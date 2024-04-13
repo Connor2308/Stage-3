@@ -3,8 +3,7 @@
     -webkit-backgraound-size:cover;
     -moz-backgraound-size:cover;
     -o-backgraound-size:cover;
-       backgraound-size:cover;
-     color: #FFF 
+    color: #FFF 
 }
 
 
@@ -15,7 +14,6 @@
     top: 0;
     left:0;
     width: 100%;
-
 }
 
 .header .navbar .links {
@@ -33,9 +31,6 @@
     margin: 5px 0 40px;
     line-height: 1.9;
     font-size: 20px;
-   
-  
-
 }
 .header .buttons button {
     background: transparent;
