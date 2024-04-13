@@ -1,0 +1,325 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 13, 2024 at 04:24 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `nahrim_schema`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hotelandhomestays`
+--
+
+CREATE TABLE `hotelandhomestays` (
+  `hotel_id` int(6) NOT NULL,
+  `region` text DEFAULT NULL,
+  `hotel_name` varchar(50) DEFAULT NULL,
+  `street_address` varchar(200) DEFAULT NULL,
+  `latitude` varchar(20) DEFAULT NULL,
+  `longitude` varchar(20) DEFAULT NULL,
+  `business_type` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hotelandhomestays`
+--
+
+INSERT INTO `hotelandhomestays` (`hotel_id`, `region`, `hotel_name`, `street_address`, `latitude`, `longitude`, `business_type`) VALUES
+(100001, 'Kedah', '38PC', '38, Jalan Tunku Yaakub, Taman Pesisiran Tanjung Chali, 05000 Alor Setar, Kedah, Malaysia', '6.1175', '100.363333', 'hotel'),
+(100002, 'Kedah', 'AB MOTEL', 'AB Motel Langkawi, Pantai Cenang, 2, Jalan Pantai Chenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah, Malaysia', '6.291944', '99.726111', 'hotel'),
+(100003, 'Kedah', 'ADINA DRIVE IN MOTEL', 'LOT 2599, JALAN PANTAI CENANG, MUKIM KEDAWANG, Kedah', 'null', 'null', 'hotel'),
+(100004, 'Kedah', 'ADYA HOTEL LANGKAWI', 'ADYA HOTEL LANGKAWI, No 1 PT 4001 Mukim Darul Aman Persiaran Mutiara 2 Mukim Kuah, 07000 Langkawi, Kedah, Malaysia', '6.326389', '99.839722', 'hotel'),
+(100005, 'Kedah', 'ADYA HOTEL PANTAI CHENANG', 'HOTEL ADYA CHENANG, Jalan Pantai Chenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah, Malaysia', '6.291111', '99.727222', 'hotel'),
+(100006, 'Kedah', 'ALIA RESIDENCE BUSINESS RESORT', 'Alia Residence Business Resort, Lot 954, Mukim, Jalan Kuala Muda, Kampung Padang Masirat, 07100 Langkawi, Kedah, Malaysia', '6.357778', '99.715833', 'hotel'),
+(100007, 'Kedah', 'ALNAJAD MOTEL', 'Shahab Perdana, 05150 Alor Setar, Kedah, Malaysia', '6.140833', '100.355278', 'hotel'),
+(100008, 'Kedah', 'ALOFT LANGKAWI PANTAI TENGHA', 'Lot PT, Aloft Langkawi Pantai Tengah, 701, Jalan Pantai Tengah, 07000 Langkawi, Kedah, Malaysia', '6.2725', '99.733889', 'hotel'),
+(100009, 'Kedah', 'ALTIS HOTEL LANGKAWI', 'Altis Hotel, No 131, Plot 274, Langkawi Mall,, Jalan Padang Matsirat, 07000 Langkawi, Kedah, Malaysia', '6.326002442452247', '99.84481031037296', 'hotel'),
+(100010, 'Kedah', 'AMBONG AMBONG POOL VILLAS LANGKAWI', 'Ambong Pool Villas, Jl. Teluk Baru, 07000 Langkawi, Kedah, Malaysia', '6.268056', '99.732778', 'hotel'),
+(100011, 'Kedah', 'AP TRAVELODGE MOTEL', 'Ap travelodge motel, 34, Jalan Gangsa, Taman Pelangi, 05460 Alor Setar, Kedah, Malaysia', '6.131111', '100.360278', 'hotel'),
+(100012, 'Kedah', 'APPLE INN HOTEL SUNGAI PETANI', 'Apple Inn Hotel, 33, Jalan Melati 1, Bandar Amanjaya, 08000 Sungai Petani, Kedah, Malaysia', '5.6775', '100.506667', 'hotel'),
+(100013, 'Kedah', 'ASEANIA RESORT LANGKAWI', 'Aseania Resort & Spa Langkawi, Simpang Tiga, Jalan Pantai Tengah, Mukim Kedawang, 07100 Langkawi, Kedah, Malaysia', '6.283056', '99.731667', 'hotel'),
+(100014, 'Kedah', 'ASIAGO HOTEL', 'ASIAGO HOTEL, 680D, Jalan Kuala Ketil, Pekan Lama, 08000 Sungai Petani, Kedah, Malaysia', '5.638611', '100.493611', 'hotel'),
+(100015, 'Kedah', 'AST HOTEL', 'AST Hotel, 05400 Alor Setar, Kedah, Malaysia', '6.085556', '100.357778', 'hotel'),
+(100016, 'Kedah', 'AWARA CHALET', 'Awara Chalet, 2A, Kampung Alor Binjal, 06500 Alor Setar, Kedah, Malaysia', '6.086389', '100.430278', 'hotel'),
+(100017, 'Kedah', 'BAYU HOTEL (BALING)', 'WISMA RAMLI, LOT 18, JALAN PULAI', '5.667222', '100.914167', 'hotel'),
+(100018, 'Kedah', 'BEE GARDEN MOTEL', 'NO. 2512 TKT BAWAH & TKT 1, KOMPLEKS TUNKU YKB, JALAN KANCUT LEBUHRAYA DARULAMAN (KANCUT)', '6.133611', '100.368611', 'hotel'),
+(100019, 'Kedah', 'BELLA VISTA EXPRESS', 'Jalan Kuala Muda, Padang Mat Sirat', '6.343333', '99.723056', 'hotel'),
+(100020, 'Kedah', 'BELLA VISTA WATERFRONT RESORT', 'Persiaran Mutiara, Pusat Dagangan Kelana Mas', '6.323889', '99.843611', 'hotel'),
+(100021, 'Kedah', 'BERJAYA LANGKAWI BEACH RESORT & SPA RESORT', 'Karung Berkunci 200,Buray Bay', '5.810556', '100.375', 'hotel'),
+(100022, 'Kedah', 'BEST SEVEN LANGKAWI INN', 'NO. 1, PEKAN BARU BAROON', '5.639167', '100.483056', 'hotel'),
+(100023, 'Kedah', 'BEST SEVEN MOTEL', '29 & 30, TAMAN BERLIAN', '6.333333', '99.861667', 'hotel'),
+(100024, 'Kedah', 'BIG BANANA HOTEL', '243, JALAN MAWAR3, TAMAN PEKAN BARU', '5.639722', '100.478056', 'hotel'),
+(100025, 'Kedah', 'BIG ORANGE HOTEL', 'NO. A31, JLN 2, CINTA SAYANG RESORT HOME', '5.666653', '100.531159', 'hotel'),
+(100026, 'Kedah', 'BLISSFULL GUEST HOUSE', 'LOT 2328, JALAN KAMPUNG BERJAYA, PANTAI CENANG, MUKIM KEDAWANG', '6.291667', '99.725833', 'hotel'),
+(100027, 'Kedah', 'BON TON RESORT', 'Lot 1047, Pantai Cenang', 'null', 'null', 'hotel'),
+(100028, 'Kedah', 'C HOTEL', 'Lot 4051,Dewan Serbaguna PJ2,Pekan Jitra 2', '6.258889', '100.416944', 'hotel'),
+(100029, 'Kedah', 'CAMAR RESORT', 'JALAN PANTAI TENGAH, MUKIM KEDAWANG', '6.275429809348926', '99.73310009070602', 'hotel'),
+(100030, 'Kedah', 'CASA DEL MAR', 'Lot 1228, Jln Pantai Cenang,Mukim Kedawang', 'null', 'null', 'hotel'),
+(100031, 'Kedah', 'CASA DEL MAR LANGKAWI', 'JALAN PANTAI CENANG, MUKIM KEDAWANG', '6.295', '99.725833', 'hotel'),
+(100032, 'Kedah', 'CASA FINA FINE HOMES', 'Lot 53, Persiaran Pantai Cenang,Mukim Kedwang', 'null', 'null', 'hotel'),
+(100033, 'Kedah', 'CASA IDAMAN MOTEL', 'LOT 2327, JALAN KAMPUNG BERJAYA, PANTAI CHENANG', '6.291667', '99.728333', 'hotel'),
+(100034, 'Kedah', 'CATTLEYA INN MOTEL', 'NO. 38, PERSIARAN DAYANG BUSINESS CENTRE, PEKAN RABU, KUAH', '6.316944', '99.850833', 'hotel'),
+(100035, 'Kedah', 'CB MOTEL', 'CB MOTEL Unnamed Road, Kampung Lubok Peringgi, 05150 Alor Setar, Kedah, Malaysia', '6.123333', '100.361667', 'hotel'),
+(100036, 'Kedah', 'CD DAAMI INN', 'Kampung Kuala Temonyong, Surau Nurul Al Hasan, 07000 Langkawi, Kedah, Malaysia', '6.289722', '99.741944', 'hotel'),
+(100037, 'Kedah', 'CENANG PLAZA BEACH HOTEL', 'Cenang Plaza Hotel Langkawi, Lot 2606, Jalan Pantai Chenang, Mukim Kedawang, 07000 Langkawi, Kedah, Malaysia', '6.290556', '99.727222', 'hotel'),
+(100038, 'Kedah', 'CENTURY LANGKASUKA RESORT', 'Century Langkasuka Resort Langkawi, Mukim, Jalan Kuala Muda, 07000 Langkawi, Kedah, Malaysia', '6.3375', '99.723056', 'hotel'),
+(100039, 'Kedah', 'CHALET SRI BAYU INN', 'Chalet Sri Bayu Inn, KM 20, Pantai Teluk Yu, Jln. Air Hangat, 07000 Langkawi, Kedah, Malaysia', '6.420833', '99.773889', 'hotel'),
+(100040, 'Kedah', 'CHALET TM3 LANGKAWI', 'Chalet TM3, Langkawi, Jalan Kedawang, Kampung Kedawang, 07000 Langkawi, Kedah, Malaysia', '6.309167', '99.736667', 'hotel'),
+(100041, 'Kedah', 'CHARLIE LANGKAWI MOTEL', 'Charlie Langkawi Motel, 1235, Jalan Pantai Tengah, 07000 Langkawi, Kedah, Malaysia', '6.293333', '99.736944', 'hotel'),
+(100042, 'Kedah', 'CHENANG INN', 'Chenang Inn, No. 18 , Kampung, Jalan Pantai Chenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah, Malaysia', '6.296111', '99.723611', 'hotel'),
+(100043, 'Kedah', 'CHENANG LODGE MOTEL', 'Chenang Lodge Motel, Kampung Lubok Buaya, 07000 Langkawi, Kedah, Malaysia', '6.296195235879358', '99.72388119202468', 'hotel'),
+(100044, 'Kedah', 'CHUU PUN VILLAGE & RESORT', 'Chuu Pun Village Resort, Kampung Kuala Temoyong, Mukim Kedawang Kuah, 07000 Langkawi, Kedah, Malaysia', '6.2875', '99.743056', 'hotel'),
+(100045, 'Kedah', 'CINTA SAYANG GOLF & COUNTRY RESORT', 'Cinta Sayang Resort, Persiaran Cinta Sayang, 08000 Sungai Petani, Kedah, Malaysia', '5.658889', '100.518889', 'hotel'),
+(100046, 'Kedah', 'CITIN HOTEL LANGKAWI', 'Citin Hotel Langkawi by Compass Hospitality, Lorong Mahsuri 3, Kuah, 07000 Langkawi, Kedah, Malaysia', '6.324167', '99.846111', 'hotel'),
+(100047, 'Kedah', 'CLOUD NINE LANGKAWI CENTER', 'Malaysia, Kedah, Langkawi, Kampung Bukit Lembu, Jalan Chandekura, Cloud9 Holiday Cottage ,07000', '6.329167', '99.743611', 'hotel'),
+(100048, 'Kedah', 'CORRIE CHALET', 'Corrie Chalet Langkawi, Jalan Pantai Tengah, 07000 Langkawi, Kedah, Malaysia', '6.280556', '99.73', 'hotel'),
+(100049, 'Kedah', 'COTTAGE BY THE SEA LANGKAWI', 'Cottage By The Sea Langkawi, Jalan Teluk Baru, Jalan Pantai Tengah, Mukim Kedawang, 07100 Langkawi, Kedah, Malaysia', '6.279167', '99.731111', 'hotel'),
+(100050, 'Kedah', 'D QAMAR MOTEL', 'D Qamar Motel, Kampung Padang Lalang, 07000 Langkawi, Kedah, Malaysia', '6.323333', '99.850556', 'hotel'),
+(100051, 'Kedah', 'DANGAU SALA RESORT', 'Dangau Sala D\'Kontena, Jalan Jemerlang-Kampung Seberang Jaya, jalan jemerlang kuala sala, 06800 Yan, Kedah, Malaysia', '5.968889', '100.356389', 'hotel'),
+(100052, 'Kedah', 'DARULAMAN SUITES', 'Bandar Darulaman, PO Box 24, Jitra, Kedah', '6.236944', '100.429444', 'hotel'),
+(100053, 'Kedah', 'DASH RESORT LANGKAWI', 'Dash Resort Langkawi, Jalan Teluk Baru, Jalan Pantai Tengah, Mukim, 07000 Langkawi, Kedah, Malaysia', '6.271389', '99.731944', 'hotel'),
+(100054, 'Kedah', 'DAYANG BAY SERVICED APARTMENT AND RESORT', 'Dayang Bay Resort Langkawi, Jalan Taman Pelangi, 07100 Langkawi, Kedah, Malaysia', '6.324722', '99.835278', 'hotel'),
+(100055, 'Kedah', 'DE BARON RESORT', 'De Baron Resort Langkawi, Bandar Baru BARON Kuah, 07000 Langkawi, Kedah, Malaysia', '6.316944', '99.849444', 'hotel'),
+(100056, 'Kedah', 'DE GREENISH VILLAGE', 'De Greenish Village Langkawi, Mukim Kuah, Jalan Ayer Hangat, 07000 Langkawi, Kedah, Malaysia', '6.326111', '99.849722', 'hotel'),
+(100057, 'Kedah', 'DE LANGKAWI RESORT & CONVENTION CENTER', 'OYO 44124 De Langkawi Resort And Convention Centre, No. 133, Jalan Durian Perangin, 07000, 07000 Langkawi, Kedah, Malaysia', '6.4175', '99.825833', 'hotel'),
+(100058, 'Kedah', 'DEBONISSA', 'De Bonissa, 289, Jalan Penarak, Kuah, 07000 Langkawi, Kedah, Malaysia', '6.312778', '99.859444', 'hotel'),
+(100059, 'Kedah', 'DELTA CHENANG RESORT', 'Delta Chenang Resort, Jalan Pantai Chenang, 07000 Langkawi, Kedah, Malaysia', '6.288333', '99.7275', 'hotel'),
+(100060, 'Kedah', 'DELTA MOTEL & RESTAURANT', 'Delta Chenang Resort, Jalan Pantai Chenang, 07000 Langkawi, Kedah, Malaysia', 'null', 'null', 'hotel'),
+(100061, 'Kedah', 'DOTA BY AST HOTEL', '10, KAWASAN PERINDUSTRIAN TANDOP BARU, LEBUHRAYA SULTANAH BAHIYAH, Kedah', '6.083056', '100.355278', 'hotel'),
+(100062, 'Kedah', 'DRYM VALLEY RESORT', 'LOT 882, JALAN BUKIT MALUT TEMOYONG, Kedah	', '6.287778', '99.745833', 'hotel'),
+(100063, 'Kedah', 'DUSUN MINDA RESORT', 'Kampung Pisang, Jalan Padang Sanai, Kedah	', '6.311944', '100.665833', 'hotel'),
+(100064, 'Kedah', 'EAGLE BAY HOTEL', '33,Jln Persiara Putra, Kedah	', '6.129167', '100.353333', 'hotel'),
+(100065, 'Kedah', 'EDC HOTELS & RESORTS', 'UNIVERSITI UTARA MALAYSIA, SINTOK, Kedah	', '6.448333', '100.509444', 'hotel'),
+(100066, 'Kedah', 'ELEVEN INN MOTEL', 'NO. 19, KAMPUNG BENDANG BARU, JALAN PENARAK, Kedah	', '6.315278', '99.8575', 'hotel'),
+(100067, 'Kedah', 'EMERALD PUTERI HOTEL(FORMERLY KNOWN AS MS GARDEN)', '50, Jalan Permatang Gedung, Taman Sejati Indah, Kedah	', '5.613611', '100.483333', 'hotel'),
+(100068, 'Kedah', 'FAVE HOTEL', 'Lot 119, Pantai Tengah, Bndr Padang Mat Sirat, Pantai Tengah, Kedah	', '6.356111', '99.6925', 'hotel'),
+(100069, 'Kedah', 'FOUR POINTS BY SHERATON LANGKAWI RESORT', 'Kuala Muda, Padang Matsirat, Kedah	', '6.345833', '99.721389', 'hotel'),
+(100070, 'Kedah', 'FOUR SEASONS RESORT LANGKAWI', 'Jalan Tanjung Rhu, Mukim AYER Hangat, Kedah	', '6.446667', '99.810556', 'hotel'),
+(100071, 'Kedah', 'FRAZEL HERITAGE HOTEL', 'NO. 429, LEBUHRAYA DARULAMAN (JLN. KANCHUT), Kedah	', '6.122778', '100.366111', 'hotel'),
+(100072, 'Kedah', 'FULLER HOTEL', 'No 1, Kompleks Perniagaan Pintu 10, Jln Pintu Sepuluh, Kedah	', '6.125278', '100.365278', 'hotel'),
+(100073, 'Kedah', 'FULLER HOTEL KULIM', 'NO. 50, TAMAN KOTA KENARI, Kedah', '5.364722', '100.578611', 'hotel'),
+(100074, 'Kedah', 'FUUKA VILLA', 'LOT 13, SEKSYEN 4, KAMPUNG TASIK ANAK, JALAN TELUK BARU, PANTAI TENGAH, MUKIM KEDAWANG, Kedah', '6.281111', '99.733333', 'hotel'),
+(100075, 'Kedah', 'GECKO GUESTHOUSE', 'JALAN MADRASAH, PANTAI CENANG, Kedah', '6.296944', '99.724722', 'hotel'),
+(100076, 'Kedah', 'GEOPARK HOTEL', 'Block C, Oriental Village, Teluk Burau, Kedah', '6.371389', '99.671944', 'hotel'),
+(100077, 'Kedah', 'GEOPARK HOTEL KUAH', 'KOMPLEKS PEKAN RABU, PERSIARAN PUTRA, Kedah', '6.316667', '99.851389', 'hotel'),
+(100078, 'Kedah', '	GM HOTEL', 'NO. 161, KAMPUNG KELIBANG, KUAH, Kedah', '6.3175', '99.849722', 'hotel'),
+(100079, 'Kedah', 'GOLDSANDS HOTEL LANGKAWI', 'LOT 557 & 559, BANDAR KUAH, Kedah', '6.317778', '99.850833', 'hotel'),
+(100080, 'Kedah', 'GRAND ALORA HOTEL ALOR SETAR', '888, Persiaran Bandar Baru Mergong, Lebuhraya Sultanah Bahiyah, Kedah', '6.129722', '100.341667', 'hotel'),
+(100081, 'Kedah', 'GREENCITY HOTEL', 'NO. 18, JALAN PERMATANG GEDONG, TAMAN SEJATI INDAH, Kedah', '5.6125', '100.4825', 'hotel'),
+(100082, 'Kedah', 'GREENISH HOTEL', 'LOT 263, JALAN AYER HANGAT, MUKIM KUAH, Kedah', '6.319437057345022', '99.85269474469226', 'hotel'),
+(100083, 'Kedah', 'H & Z LANGKAWI MOTEL', 'KAMPUNG PADANG PUTIH, MUKIM KEDAWANG, Kedah', '6.285', '99.733056', 'hotel'),
+(100084, 'Kedah', 'HANGOUTS URBAN ECO LANGKAWI', 'HANGOUTS LOT 1895, KAMPUNG PANDANG GAONG MUKIM, Kedah', '6.367222', '99.776667', 'hotel'),
+(100085, 'Kedah', 'HIG HOTEL LANGKAWI', 'LOT 1852 JALAN PENARAK, MUKIM KUAH, Kedah', '6.323056', '99.849444', 'hotel'),
+(100086, 'Kedah', 'HILL LAKE VIEW RESORT', 'KAMPUNG TERNAS, SUNGAI BATANG, Kedah', '5.945', '100.786667', 'hotel'),
+(100087, 'Kedah', 'HOTEL AKASIA', 'NO. 2-A & 4-A, LORONG PERMAIPURA DAMAI 6, TAMAN PERMAIPURA, Kedah', '5.722222', '100.516111', 'hotel'),
+(100088, 'Kedah', 'HOTEL ASIA', '3A & 4A, Jln Persiaran Putra, Kedah', 'null', 'null', 'hotel'),
+(100089, 'Kedah', 'HOTEL ASRC', '58, Lebuhraya Darulaman, Kedah', '6.129444', '100.368611', 'hotel'),
+(100090, 'Kedah', 'HOTEL BAHAGIAN LANGKAWI', 'NO. 68 - 78, PERSIARAN BUNGA RAYA, LANGKAWI MALL, PHASE II, Kedah', '6.326389', '99.842222', 'hotel'),
+(100091, 'Kedah', 'HOTEL BUSTANI', 'Jln Jitra Changlun Jitra, Kedah', '6.269444', '100.419444', 'hotel'),
+(100092, 'Kedah', 'HOTEL DARULAMAN', 'Lot 116&117, Bandar Darulaman, Kedah', '6.237737', '100.423329', 'hotel'),
+(100093, 'Kedah', 'HOTEL DARULAMAN ALOR SETAR', 'LOT 1590, JALAN TUNKU IBRAHIM, Kedah', '6.116389', '100.368333', 'hotel'),
+(100094, 'Kedah', 'HOTEL DUTA', 'No.7,Jln Petri, Kedah', '5.634444', '100.483611', 'hotel'),
+(100095, 'Kedah', 'HOTEL GRAND CONTINENTAL', 'Lot 134-141,Jln Sultan Badlishah, Kedah', '6.118056', '100.368056', 'hotel'),
+(100096, 'Kedah', 'HOTEL GRAND CONTINENTAL', 'Lot 398, Mukim Kuah, Kedah', '6.32725', '99.837222', 'hotel'),
+(100097, 'Kedah', 'HOTEL GRAND CRYSTAL', '40, Jln Kg. Perak, Kedah', '6.119722', '100.362222', 'hotel'),
+(100098, 'Kedah', 'HOTEL LANGKASUKA', 'A14-15, Batu 3/4,Pokok Asam,Kuah, Kedah', '6.327222', '99.838056', 'hotel'),
+(100099, 'Kedah', 'HOTEL PARK AVENUE SG. PETANI', 'E1, Jln Indah 2, Tmn Sejati Indah, Kedah', '5.614167', '100.486667', 'hotel'),
+(100100, 'Kedah', 'HOTEL SABENA.COM', 'No. 1, Kompleks Perniagaan Asas Jaya, Jalan Stadium, Kedah', '6.135278', '100.373056', 'hotel'),
+(100101, 'Kedah', 'HOTEL SAMILA', '20, Jln Kanchut, Kedah', '6.1225', '100.366667', 'hotel'),
+(100102, 'Kedah', 'HOTEL SERI MALAYSIA ALOR SETAR', 'Lot 005127, Mukim Alor Malai, Jln Stadium, Kedah', '6.134444', '100.371944', 'hotel'),
+(100103, 'Kedah', 'HOTEL SERI MALAYSIA KULIM', 'Taman Tasik Putra, Kedah', '5.371111', '100.561111', 'hotel'),
+(100104, 'Kedah', 'HOTEL SRI MALAYSIA SUNGAI PETANI', 'Section 21, Jln Pasar, Kedah', '5.643056', '100.490833', 'hotel'),
+(100105, 'Kedah', 'JABATRAH MOTEL', '203-207 Shahab Perdana Complex, Kota Setar, Kedah', '6.14', '100.354167', 'hotel'),
+(100106, 'Kedah', 'JANSEN MOTEL', '65, Jln Biru 2, Kg Berjaya, Seberang Jln Putra, Kedah', '6.125', '100.355', 'hotel'),
+(100107, 'Kedah', 'JP HOTEL @ JALAN STADIUM', '1909, JALAN STADIUM, Kedah', '6.128889', '100.373333', 'hotel'),
+(100108, 'Kedah', 'JP HOTEL PHASE 2', 'NO.?158 & 159, SULTAN ABDUL HAMID COMPLEX, PHASE 2, JLN PEGAWAI, Kedah', '6.109444', '100.3625', 'hotel'),
+(100109, 'Kedah', 'JP HOTEL JALAN PEGAWAI', 'NO.?115, SULTAN ABDUL HAMID COMPLEX, JALAN PEGAWAI, Kedah', '6.104444', '100.361111', 'hotel'),
+(100110, 'Kedah', 'JUWITA CHALET', 'F826, KAMPUNG TELUK NIPAH, Kedah', '5.664167', '100.358889', 'hotel'),
+(100111, 'Kedah', 'K GARDEN HOTEL @ SG.?FARMER', 'NO.?66, LENGKOK CEMPAKA 1, PERSIARAN AMANJAYA, Kedah', '5.671389', '100.511944', 'hotel'),
+(100112, 'Kedah', 'KASTURI MOTEL', 'LOT 383, KG.?BUKIT TEKUH, JALAN PADANG MATSIRAT, Kedah', '6.326667', '99.804444', 'hotel'),
+(100113, 'Kedah', 'KBKB HOMELYSTAY', 'KAMPUNG MATA AYER, MUKIM ULU MELAKA, Kedah', '6.322222', '99.785', 'hotel'),
+(100114, 'Kedah', 'KEDA RESORT AND HOLIDAYS', 'KAMPUNG BENDANG MAN, Kedah', '5.860278', '100.825278', 'hotel'),
+(100115, 'Kedah', 'KELIBANG COMFORT INN', 'LOT PT1503A, BATU 1, KAMPUNG KELIBANG, Kedah', '6.328889', '99.834167', 'hotel'),
+(100116, 'Kedah', 'KERIANG HILL RESORT', 'MUKIM GUNUNG, Kedah', '6.19', '100.327222', 'hotel'),
+(100117, 'Kedah', 'ISTANA CONDO', 'Lot 757, Jln Penarak, Kuah, Kedah', '6.324444', '99.85', 'hotel'),
+(100118, 'Kedah', 'KUALA MELAKA INN', 'COMPLEX PERDANA, KUALA MELAKA ROAD, Kedah', '6.351389', '99.72', 'hotel'),
+(100119, 'Kedah', 'KUNANG KUNANG HERITAGE VILLAS', 'LOT 1947 A, KAMPUNG GELAM, MUKIM JALAN PANTAI CHENANG, Kedah', '6.321944', '99.731111', 'hotel'),
+(100120, 'Kedah', 'LANDCONS HOTEL', 'JALAN PANTAI CHENANG, KAMPUNG LUBOK BUAYA, Kedah', '6.287222', '99.73', 'hotel'),
+(100121, 'Kedah', 'LANGKAPURI BEACH RESORT', 'Plot 9, Tanjong Mali Pantai Cenang, Kedah', '6.289167', '99.727778', 'hotel'),
+(100122, 'Kedah', 'LANGKASUKA BEACH RESORT', 'Jalan Kuala Muda, Padang Mat Sirat, Kedah', '6.3325', '99.755833', 'hotel'),
+(100123, 'Kedah', 'LANGKAWI DE BLEU HOTEL', 'LOT 144, 146 & 148, PERSIARAN BUNGA RAYA LANGKAWI MALL, KUAH, Kedah', '6.325833', '99.844722', 'hotel'),
+(100124, 'Kedah', 'LANGKAWI HOLIDAY VILLA', 'Lot 1698, Pantai Tengah, Kedawang Subdistrict, Kedah', '6.273611', '99.732778', 'hotel'),
+(100125, 'Kedah', 'LANGKAWI LAGOON BEACH RESORT', 'LOT 78, JALAN KUALA MUDA, MUKIM PADANG MAT SIRAT, Kedah', '6.352222', '99.718056', 'hotel'),
+(100126, 'Kedah', 'LANGKAWI LAGOON RESORT', 'Lot 78, Kg.?Kuala Melaka, Jalan Kuala Muda, Padang Mat Sirat Subdistrict, Kedah', 'null', 'null', 'hotel'),
+(100127, 'Kedah', 'LANGKAWI SEAVIEW HOTEL', 'Lot 40, Jln Penarak, Mukim Kuah, Kedah', '6.315', '99.855278', 'hotel'),
+(100128, 'Kedah', 'LANGKAWI UPTOWN HOTEL', 'NO.?1, JALAN PANDAK MAYAH 7, PUSAT BANDAR KUAH, Kedah', '6.321667', '99.852222', 'hotel'),
+(100129, 'Kedah', 'LAVIGO RESORT', 'LOT 2764, TEPI GO-KART, CENANG BEACH, Kedah', '6.314444', '99.723889', 'hotel'),
+(100130, 'Kedah', 'LEAN HOTEL', 'No 30&30A, Lorong BLM 1/6, Bandar Laguna Merbok, Kedah', '5.682222', '100.494167', 'hotel'),
+(100131, 'Kedah', 'LENCONG BARAT INN', '20, JALAN LENCONG BARAT, SUSRAN TANDOP UTAMA, Kedah', '6.085833', '100.358889', 'hotel'),
+(100132, 'Kedah', 'SEE HOTEL PIN', 'NO.?21A, UPPER FLOOR, JALAN PETANI, Kedah', '5.640278', '100.486944', 'hotel'),
+(100133, 'Kedah', 'LOVELY ORGANIC FARM (SRI LOVELY)', 'BELANTIK VILLAGE, Kedah', '6.045', '100.85', 'hotel'),
+(100134, 'Kedah', 'LYAA RESTHOUSE', 'Lyaa Resthouse, Jalan Ayer Hangat, Kampung Sungai Itau, Mukim Ulu Melaka, Bohor Merah, 07000, KH, Malaysia', '6.416111', '99.830556', 'hotel'),
+(100135, 'Kedah', 'M SEASON HOTEL', 'NO.?119 - 120, A - B - C, JALAN MASJID 1, TAMAN PEKAN BARU, Kedah', '5.638889', '100.483056', 'hotel'),
+(100136, 'Kedah', 'MELATI TANJUNG MOTEL', 'Pantai Cenang, Kedah', '6.294444', '99.724444', 'hotel'),
+(100137, 'Kedah', 'MERCURE LANGKAWI PANTAI CENANG', 'LOT 2500 PANTAI CENANG, MUKIM KEDAWANG, Kedah', '6.290833', '99.729167', 'hotel'),
+(100138, 'Kedah', 'MERDEKA BEACH RESORT', 'MERDEKA BEACH, KOTA KUALA MUDA, Kedah', '5.665556', '100.366667', 'hotel'),
+(100139, 'Kedah', 'MERILTON HOTEL', 'JALAN KAMPUNG BARU, Kedah', '5.635556', '100.484444', 'hotel'),
+(100140, 'Kedah', 'MERITUS PELANGI BEACH RESORT & SPA LANGKAWI', 'Jln Pantai Cenang, Kedah', '6.299167', '99.720833', 'hotel'),
+(100141, 'Kedah', 'MNY WANGSA INN ', 'No. 54, Jln Shahab 5, Kaw. Shahab Perdana, Kedah	', '6.141389', '100.355', 'hotel'),
+(100142, 'Kedah', 'MODULAR LANGKAWI CAPSULE HOTEL', 'NO.?1, PADANG MATSIRAT STORE HOUSE, PADANG MATSIRAT JALAN, PADANG MATSIRAT CITY, Kedah', '6.351389', '99.736944', 'hotel'),
+(100143, 'Kedah', 'MOTEL SRI MANIS', 'No.13, Jln Penarak, Kuah, Kedah', '6.324722', '99.848611', 'hotel'),
+(100144, 'Kedah', 'WARISAN SITI MOTEL', 'NO. 52 A, BANDAR BARU BARON, MUKIM KUAH, Kedah	', '6.317222', '99.850556', 'hotel'),
+(100145, 'Kedah', 'MY HOTEL', 'No 557 & 559, Bandar Kuah, Kedah', 'null', 'null', 'hotel'),
+(100146, 'Kedah', 'MY RAINFOREST CHALET', '325, KAMPUNG PADANG PUTEH, KEDAWANG, Kedah', '6.2896247155014535', '99.72930991537287', 'hotel'),
+(100147, 'Kedah', 'MY RAINFOREST SUITE HOTEL', 'LOT 1577 - 1580, BANDAR KUAH, Kedah', '6.324722', '99.845278', 'hotel'),
+(100148, 'Kedah', 'MYVILLA LANGKAWI HOTEL', 'JALAN BOHOR TEMPOYAK, MUKIM KEDAWANG, Kedah', '6.297778', '99.735833', 'hotel'),
+(100149, 'Kedah', 'NADIAS HOTEL', 'Lot 977, Cenang Beach, Kedawang Subdistrict, Kedah', '6.291111', '99.7275', 'hotel'),
+(100150, 'Kedah', 'NAGOYA INN', 'LOT 40 - 48, LORONG TIRAM 3, PUSAT MAS BATU 1, KELIBANG, Kedah', '6.327222', '99.836111', 'hotel'),
+(100151, 'Kedah', 'NAHDHOH LANGKAWI RESORT', 'MUKIM KEDAWANG, Kedah', '6.294444', '99.741111', 'hotel'),
+(100152, 'Kedah', 'NEW DAWN FOR LANGKAWI', 'LOT 3030, JALAN BATU BELAH BERTANGKUP, MUKIM KEDAWANG, Kedah	', '6.329167', '99.750833', 'hotel'),
+(100153, 'Kedah', 'NOBA RESORT LANGKAWI', 'LOT 1477, KAMPUNG SELAT BAGAN NYIOR, KUAH, Kedah', '6.263889', '99.821944', 'hotel'),
+(100154, 'Kedah', 'NORFA CAMP HOUSE', 'NO.?10, KG.?TOK KASSIM, JALAN SINTOK, Kedah', '6.451667', '100.450833', 'hotel'),
+(100155, 'Kedah', 'NORTHERN LODGE', 'C80, Lane 9, Tamam Sejati Indah, Kedah', '5.612778', '100.483611', 'hotel'),
+(100156, 'Kedah', 'OMBAK VILLA LANGKAWI', 'Lot 78, Kuala Muda, Jalan Kuala Muda, Mukim matsirat, Kedah', '6.351389', '99.718333', 'hotel'),
+(100157, 'Kedah', 'P MOTEL LANGKAWI', 'NO. 3 & 4, TAMAN LANGKAWI, Kedah	', '6.332778', '99.816667', 'hotel'),
+(100158, 'Kedah', 'PADI HOTEL', 'NO.?222, JALAN BSG 9, STARGATE TOWN, Kedah', '6.077778', '100.370278', 'hotel'),
+(100159, 'Kedah', 'PAK RAJA VILLAS', 'LOT 690, PAYA KELI, KAMPUNG PADANG GAUNG, MUKIM ULU MELAKA, Kedah', '6.35', '99.795278', 'hotel'),
+(100160, 'Kedah', 'PANTAI MERDEKA RESORT', 'Kota Kuala Muda, Kedah	', '5.617778', '100.388333', 'hotel'),
+(100161, 'Kedah', 'PARETTO SEAVIEW HOTEL', 'LOT 2599, JALAN PANTAI CENANG, MUKIM KEDAWANG, Kedah	', '6.291389', '99.726944', 'hotel'),
+(100162, 'Kedah', 'PARKROYAL LANGKAWI', 'LOT 6019, PANTAI TENGAH, JALAN PADANG MATSIRAT, MUKIM PADANG MATSIRAT, Kedah	', '6.282726', '99.73019', 'hotel'),
+(100163, 'Kedah', 'PAWANA JERAI RESORT', '842, PERSIARAN PANTAI RUAT, JALAN RUAT, Kedah	', '5.761944', '100.365833', 'hotel'),
+(100164, 'Kedah', 'PEMANDANGAN INDAH GUEST HOUSE', 'NO. 1, PEMANDANGAN INDAH, JALAN PADANG MATSIRAT, Kedah	', '6.333889', '99.742778', 'hotel'),
+(100165, 'Kedah', 'PENARAK BAMBOO BEACH MOTEL', 'LOT 85, KAMPUNG PENARAK, Kedah	', '6.306667', '99.861389', 'hotel'),
+(100166, 'Kedah', 'PENDANG LAKE RESORT', 'Pendang Lake Resort, Kedah	', '5.998611', '100.474444', 'hotel'),
+(100167, 'Kedah', 'PERDANA BEACH RESORT', 'LOT 79, JALAN KUALA MELAKA, MUKIM PADANG MATSIRAT, Kedah	', '6.351667', '99.719444', 'hotel'),
+(100168, 'Kedah', 'PUREST HOTEL SUNGAI PETANI', 'No. A-2, Jalan Indah 1, Taman Sejati Indah, Kedah	', '5.614722', '100.481944', 'hotel'),
+(100169, 'Kedah', 'RAIA HOTEL & CONVENTION CENTRE ALOR SETAR', 'LOT 3860, MUKIM TITI GAJAH, SEKSYEN 2, BANDAR ANAK BUKIT, Kedah	', '6.1975', '100.388889', 'hotel'),
+(100170, 'Kedah', 'RAINBOW HOTEL', '225, Kawasan Perindustrian Tandop, Jln Lencong Barat, Kedah	', '6.084167', '100.358056', 'hotel'),
+(100171, 'Kedah', 'RANIS LODGE', 'LOT 1261, KAMPUNG NYIOR CHABANG, MUKIM BOHOR, Kedah	', '6.371667', '99.7525', 'hotel'),
+(100172, 'Kedah', 'RASA SENANG VILLA', 'LOT 2609, PANTAI CHENANG, Kedah	', '6.289444', '99.728333', 'hotel'),
+(100173, 'Kedah', 'RED DOOR APARTMENTS', 'LOT 679, JALAN ULU MELAKA, PADANG LALANG, AYER HANGAT, Kedah	', '6.420833', '99.803056', 'hotel'),
+(100174, 'Kedah', 'RESORTS WORLD LANGKAWI', 'Tanjung Malai, Kedah	', '6.26', '99.735833', 'hotel'),
+(100175, 'Kedah', 'RIVERRA INN', 'LOT 290, KAMPUNG KUAH, MUKIM KUAH, Kedah	', '6.323611', '99.855556', 'hotel'),
+(100176, 'Kedah', 'RNK HOTEL', 'WISMA RNK, NO. 1 (LOT 4587) & NO. 2 (LOT 4586), Kedah	', 'null', 'null', 'hotel'),
+(100177, 'Kedah', 'ROYAL AGATE BEACH RESORT', '1659, JALAN PANTAI CENANG, Kedah	', '6.2925', '99.726111', 'hotel'),
+(100178, 'Kedah', 'ROYALE CHENANG RESORT', 'JALAN TELUK BARU, PANTAI TENGAH, Kedah	', '6.275556', '99.733889', 'hotel'),
+(100179, 'Kedah', 'ROYALE SIGNATURE HOTEL', 'NO.78, JALAN LUMPUR, Kedah	', '6.125556', '100.3625', 'hotel'),
+(100180, 'Kedah', 'SALSA RESORT LANGKAWI', '2436 KAMPUNG TEMOYONG, Kedah	', '6.294167', '99.738611', 'hotel'),
+(100181, 'Kedah', 'SANDY BEACH RESORT', 'JALAN PANTAI CENANG, Kedah	', '6.292616', '99.725823', 'hotel'),
+(100182, 'Kedah', 'SANDY GARDEN RESORT LANGKAWI', 'JALAN PANTAI CHENANG, MUKIM KEDAWANG, Kedah	', '6.293479', '99.726137', 'hotel'),
+(100183, 'Kedah', 'SASTRIA HOTEL', 'No 28, Jalan Pahlawan, Taman lagenda Indah, Kedah	', '5.658611', '100.495278', 'hotel'),
+(100184, 'Kedah', 'SAUJANA CT VIEW HOTEL', 'NO. 6, JALAN CEMPAKA 1/1, BANDAR AMANJAYA, Kedah	', '5.671944', '100.507778', 'hotel'),
+(100185, 'Kedah', 'SEASON INN LANGKAWI MOTEL', '65, PERSIARAN MUTIARA 2, PUSAT PERDAGANGAN KELANA MAS, Kedah	', '6.324444', '99.844722', 'hotel'),
+(100186, 'Kedah', 'SENTOSA REGENCY HOTEL', '250, Jln Putra, Kedah	', '6.123611', '100.361667', 'hotel'),
+(100187, 'Kedah', 'SENYUM INN', 'LOT 35, KOMPLEKS ABZ, JALAN AIRPORT PADANG MATSIRAT, Kedah	', '6.346944', '99.736389', 'hotel'),
+(100188, 'Kedah', 'SERI TERNAS RESORT', 'BT 53, KAMPUNG TERNAS, Kedah	', '5.929722', '100.770278', 'hotel'),
+(100189, 'Kedah', 'SHELL OUT RESORT', 'LOT 2599, JALAN PANTAI CENANG, MUKIM KEDAWANG, Kedah	', '6.292009', '99.727406', 'hotel'),
+(100190, 'Kedah', 'SIMFONI RESORT', 'Lot 3, Bandar Kuah, Jalan Tmn Pelangi, Kedah	', '6.325278', '99.835', 'hotel'),
+(100191, 'Kedah', 'SP CENTRAL HOTEL', '6A, JALAN IBRAHIM, Kedah	', '5.645278', '100.489722', 'hotel'),
+(100192, 'Kedah', 'SP GOLDEN STAR HOTEL', '288 & 289, JLN TUANKU HAMINAH 6, TAMAN TUANKU HAMINAH, Kedah	', '5.653333', '100.510278', 'hotel'),
+(100193, 'Kedah', 'STARCITY HOTEL ALOR STAR', '88, Jalan Pintu Sepuluh, Kedah	', '6.124444', '100.364167', 'hotel'),
+(100194, 'Kedah', 'STAY 365 HOTEL', 'NO. 55, JALAN TEJA, TAMAN TEJA, Kedah	', '6.441389', '100.429167', 'hotel'),
+(100195, 'Kedah', 'SUNGAI BATANG LAKE CHALET', 'KAMPUNG SUNGAI BATANG, Kedah	', '5.946111', '100.786667', 'hotel'),
+(100196, 'Kedah', 'SUNGAI PETANI INN', '427, Jln Kolam, Kedah	', '5.650833', '100.489167', 'hotel'),
+(100197, 'Kedah', 'SUNSET BEACH RESORT', 'PANTAI TENGAH, MUKIM KEDAWANG, Kedah	', '6.285127540819466', '99.72998994080692', 'hotel'),
+(100198, 'Kedah', 'SWISS AVENUE HOTEL', 'NO. 1 JALAN PAHLAWAN, TAMAN PAHLAWAN, Kedah	', '5.661944', '100.495', 'hotel'),
+(100199, 'Kedah', 'T HOTEL', '12-13 Susuran Tandop Utama, Kawasan Perusahaan Tandop Baru, Kedah	', '6.086111', '100.358611', 'hotel'),
+(100200, 'Kedah', 'T+ HOTEL ALOR SETAR', 'No 888, Batu 2 1/2, Lebuhraya Sultan Abdul Halim, Kedah	', '6.085', '100.3625', 'hotel'),
+(100201, 'Kedah', 'T+ HOTEL SUNGAI PETANI', 'No. 58 - 62, Lengkok Cempaka 1, Persiaran Cempaka Amanjaya, Kedah	', '5.671944', '100.512222', 'hotel'),
+(100202, 'Kedah', 'T+ PREMIUM HOTEL', 'NO. 5319, LEBUH SULTAN ABD. HALIM, Kedah	', '6.09', '100.363611', 'hotel'),
+(100203, 'Kedah', 'TAMARINDA GUEST HOUSE', 'NO. 30, ARKED POKOK ASAM 1, LANGKAWI MALL, KUAH, Kedah	', '6.3275', '99.840278', 'hotel'),
+(100204, 'Kedah', 'TANJAK MOTEL', '174 - 182 (GF), JALAN SHAHAB 5, KOMPLEKS SHAHAB PERDANA, Kedah	', '6.140556', '100.355', 'hotel'),
+(100205, 'Kedah', 'TANJUNG RHU RESORT LANGKAWI', 'Mukim Ayer Hangat, Kedah	', '6.454444', '99.823333', 'hotel'),
+(100206, 'Kedah', 'TERATAK SIREH LAGENDA', 'LOT 1773, JALAN BOHOR CEMPEDAK, MK BOHOR, Kedah	', '6.3475', '99.744444', 'hotel'),
+(100207, 'Kedah', 'THE ANDAMAN A LUXURY COLLECTION RESORT', 'P.O.Box 94, Jln Teluk Datai, Kedah	', '6.429444', '99.675556', 'hotel'),
+(100208, 'Kedah', 'THE BAYOU HOTEL', 'JALAN PANTAI TENGAH, MUKIM KEDAWANG, Kedah	', '6.284722', '99.732222', 'hotel'),
+(100209, 'Kedah', 'THE CITY BAYVIEW HOTEL, LANGKAWI', 'Jln Pandak Mayah 1,Pusat Bandar Kuah, Kedah	', '6.323056', '99.848889', 'hotel'),
+(100210, 'Kedah', 'THE DANNA LANGKAWI RESORT', 'No. 236, Telaga Harbour Park, Pantai Kok, Kedah	', '6.368056', '99.681667', 'hotel'),
+(100211, 'Kedah', 'THE DATAI LANGKAWI', 'Jalan Teluk Datai, Kedah	', '6.420278', '99.670278', 'hotel'),
+(100212, 'Kedah', 'THE GARDEN HOTEL', 'Lot 26, Mukim Kuah,Jln Ayer Hangat, Kedah	', '6.326709', '99.849662', 'hotel'),
+(100213, 'Kedah', 'THE GEMALAI VILLAGE', 'LAMAN PADI, JALAN PANTAI CHENANG, Kedah	', '6.299444', '99.723333', 'hotel'),
+(100214, 'Kedah', 'THE LEVERAGE BUSINESS HOTEL', 'No 12, Jalan Lengkok Sari, Tmn Bndr Baru Mergong, Kedah	', '6.13', '100.338611', 'hotel'),
+(100215, 'Kedah', 'THE LEVERAGE BUSINESS HOTEL KUALA KEDAH', 'No. 50, Tmn Gunung Indah, Jln Kuala Ledah, Kedah	', '6.096667', '100.357778', 'hotel'),
+(100216, 'Kedah', 'THE OCEAN RESIDENCE LANGKAWI', 'NO. 1, OCEAN FRONT ESTATE, BUKIT BENGGALI KUAH, Kedah	', '6.320833', '99.811667', 'hotel'),
+(100217, 'Kedah', 'THE REGENCY ALOR SETAR', 'Lot 134-141, Jalan Sultan Badlishah, Kedah	', '6.118056', '100.368056', 'hotel'),
+(100218, 'Kedah', 'THE REGENCY DARULAMAN SUITES', 'Lot 888, Bandar Darulaman, Kedah	', '6.235556', '100.423056', 'hotel'),
+(100219, 'Kedah', 'THE REGENCY JERAI HILL RESORT', 'PUNCAK GUNUNG JERAI, JALAN SG. PETANI, Kedah	', '5.796667', '100.435278', 'hotel'),
+(100220, 'Kedah', 'THE RITZ-CARLTON LANGKAWI', 'P.O. BOX 199, JLN PANTAI KOK, KAMPUNG TELUK NIBONG, Kedah	', '6.358889', '99.695', 'hotel'),
+(100221, 'Kedah', 'THE RIYAZ LAVANYA LANGKAWI', 'JALAN TELUK BARU, PANTAI TENGAH, Kedah	', '6.277407', '99.732676', 'hotel'),
+(100222, 'Kedah', 'THE SMITH HOUSE', 'LOT. 297, BANDAR PADANG MATSIRAT, Kedah	', '6.350256', '99.730771', 'hotel'),
+(100223, 'Kedah', 'THE ST REGIS LANGKAWI', 'Jalan Beringin, Kedah	', '6.296111', '99.8625', 'hotel'),
+(100224, 'Kedah', 'THE UNIVERSITY INN', 'Rumah Universiti, Universiti Utara Malaysia, Kedah	', '6.461389', '100.504444', 'hotel'),
+(100225, 'Kedah', 'THE VILLA LANGKAWI', 'LOT 993, PADANG PUTIH MUKIM KEDAWANG, Kedah	', '6.287731307012405', '99.73483320874348', 'hotel'),
+(100226, 'Kedah', 'THE WESTIN LANGKAWI RESORT & SPA', 'Jln Pantai Dato\' Syed Omar, Kedah	', '6.300334', '99.855144', 'hotel'),
+(100227, 'Kedah', 'TOKJAH GUESTHOUSE', 'NO. 82, KAMPUNG TANJUNG MALI, PANTAI CHENANG, MUKIM KEDAWANG, KUAH, Kedah	', '6.291389', '99.730833', 'hotel'),
+(100228, 'Kedah', 'TUBA BEACH RESORT', 'NO. 18 & 17, KAMPUNG TEPI LAUT, TUBA TIMUR, PULAU TUBA, Kedah	', '6.240412', '99.855728', 'hotel'),
+(100229, 'Kedah', 'TUNE HOTEL KULIM', 'No. 4, Jln KLC Satu (1), Kulim Landmark Central, Kedah	', '5.384167', '100.546111', 'hotel'),
+(100230, 'Kedah', 'URBAN INN JITRA', 'NO. 188, B-190B, JALAN PJ2, PEKAN JITRA 2, Kedah	', '6.258611', '100.417778', 'hotel'),
+(100231, 'Kedah', 'URBAN INN, ALOR SETAR', 'LOT T3 & T4, KOMPLEKS PERNIAGAAN AMPANG, LEBUHRAYA SULTANAH BAHIYAH (JALAN SULTANAH), Kedah	', '6.111944', '100.350556', 'hotel'),
+(100232, 'Kedah', 'URBAN INN, KULIM', 'NO 925-926, Jlaan lembah Impiana 5, Lembah Impiana III, Kedah	', '5.366667', '100.529167', 'hotel'),
+(100233, 'Kedah', 'URBAN INN, SP SAUJANA', 'NO. 113-114 TKT BAWAH & 112-120 TKT ATAS, JALAN PKS(B) PUSAT KOMERSIAL, SP SAUJANA, Kedah	', '5.685725', '100.537996', 'hotel'),
+(100234, 'Kedah', 'VILLA 4 - PRIVATE POOL', 'JALAN BUKIT MALUT, MUKIM KEDAWANG, Kedah	', 'null', 'null', 'hotel'),
+(100235, 'Kedah', 'VILLA MOLEK', 'LOT 2863, JALAN TASIK ANAK, PANTAI TENGAH, Kedah	', '6.281803', '99.732172', 'hotel'),
+(100236, 'Kedah', 'VILLA THAI LANGKAWI', 'NO. 54, LOT 1608, BOHOR TEMPOYAK, MUKIM KEDAWANG, Kedah	', 'null', 'null', 'hotel'),
+(100237, 'Kedah', 'VIRTEUZ INN', '98-1, PERSIARAN BUNGA RAYA, LANGKAWI MALL, KUAH, Kedah	', '6.326397', '99.843502', 'hotel'),
+(100238, 'Kedah', 'VIVANTA REBAK ISLAND LANGKAWI BY TAJ', 'Pulau Rebak Besar, Kedah	', '6.294098', '99.701066', 'hotel'),
+(100239, 'Kedah', 'WANG VALLEY RESORT', '88, JALAN TEMOYONG, MUKIM KEDAWANG, Kedah	', '6.289655', '99.752164', 'hotel'),
+(100240, 'Kedah', 'WARISAN TOK CHAH ROOMSTAY', 'LOT 348, HADAPAN PASARAYA KEDAWANG, MUKIM KEDAWANG, Kedah	', '6.314722', '99.736667', 'hotel'),
+(100241, 'Kedah', 'WHITE LODGE LANGKAWI', 'JLN PANTAI CENANG, MUKIM KEDAWANG, Kedah	', '6.286222', '99.731305', 'hotel'),
+(100242, 'Kedah', 'WINGS BY CROSKE RESORT LANGKAWI', 'LOT 274, JALAN MAHSURI, MUKIM KUAH, Kedah	', 'null', 'null', 'hotel'),
+(100243, 'Kedah', 'Homestay Kampung Jeruju,  Ayer Hitam', 'Pertubuhan Peladang Semangat Baru MADA F II Jerlun, Km 15, Jalan Putra, 06150 Ayer Hitrealuam, Kedah', '6.282222', '100.236667', 'homestay'),
+(100244, 'Kedah', 'Homestay Relau', 'Lot 1064, Jalan Baru Relau, 14200 Bandar Baharu, Kedah', '5.236944', '100.5475', 'homestay'),
+(100245, 'Kedah', 'Homestay Kampung Raga', 'No. 409F, Kampung Raga, Kedah, 06900 Yan, Malaysia', '5.783333', '100.379167', 'homestay'),
+(100246, 'Kedah', 'Kampung KEDA', 'Koperasi Pembangunan Kg. Ulu Legong D/A Pejabat Koperasi Kampung Ulu Legong 09100 Baling, Kedah', '5.813333', '100.923889', 'homestay'),
+(100247, 'Kedah', 'Kampung Sungai Badak', 'No 4, Kampung Sungai Badak, 08300 Gurun, Kedah, Malaysia', '5.825219', '100.472728', 'homestay'),
+(100248, 'Kedah', 'Homestay D?Belimbing', 'Pejabat Kawasan Bukit Tampoi, Km 27, Jalan Kuala Nerang, Kedah Darul Aman, 06300 Kuala Nerang, Kedah, Malaysia', '5.82', '100.475', 'homestay'),
+(100249, 'Kedah', 'Homestay Pulau Pisang', 'NO. 105, Kampung Pulau Pisang, 06000 Jitra, Kedah, Malaysia', '6.271389', '100.383056', 'homestay'),
+(100250, 'Kedah', 'Homestay Kampung Pantai Jamai', 'Jln Langgar, Kampung Mati, 06500 Alor Setar, Kedah, Malaysia', '6.159167', '100.423333', 'homestay'),
+(100251, 'Kedah', 'Homestay Wang Tok Rendong', 'Homestay Kampung Wang Tok Rendong, Desa wang tok rendong, Jalan Ayer Hangat, 07000 Kuah, Kedah, Malaysia', '6.351111', '99.880833', 'homestay'),
+(100252, 'Kedah', 'Homestay Pulau Tuba', 'Langkawi Kampung Teluk Berembang, Pulau Tuba, Mukim Kuah 07000 Langkawi Kedah', '6.226944', '99.842778', 'homestay'),
+(100253, 'Kedah', 'Homestay Padang Lalang,', 'No. 36, Kampung Padang Lalang, Mukim, 07000 Langkawi, Kedah, Malaysia', '6.426389', '99.803333', 'homestay'),
+(100254, 'Kedah', 'Homestay SEDIM', 'Kampung Sungai Buloh, 09700 Karangan, Kedah, Malaysia', '5.403056', '100.750278', 'homestay'),
+(100255, 'Kedah', 'Homestay Kg. Sungai Itau', 'Homestay Kg Sungai Itau, Bt 9 1/4 Kampung Sungai Itau, Air Hangat Langkawi, Malaysia', '6.422778', '99.813333', 'homestay'),
+(100256, 'Kedah', 'Homestay Weng Valley', 'FELCRA Berhad Kawasan Weng, Km. 90, Jalan Weng, 09100 Baling, Kedah, Malaysia', '5.810278', '100.875278', 'homestay');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `hotelandhomestays`
+--
+ALTER TABLE `hotelandhomestays`
+  ADD PRIMARY KEY (`hotel_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `hotelandhomestays`
+--
+ALTER TABLE `hotelandhomestays`
+  MODIFY `hotel_id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100257;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

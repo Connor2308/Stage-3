@@ -1,0 +1,27 @@
+Task 1: Extract hotel location from website - Completed
+a. https://www.motac.gov.my/semakan/hotel-daftar 
+
+Task 2: Extract homestay location from pdf - Completed
+b. https://www.motac.gov.my/program/pelancongan/homestay
+(refer Direktori Homestay)
+
+Task 3: Create hotel and homestay database for Malaysia with the following data: - Completed
+c. Name
+d. Full Address (street, region, street etc)
+e. Longitude
+f. Latitude
+
+Task 4: Develop spatial DSS using Google Map for spatial visualisation - Completed, weather can be seen in area as well
+g. Develop a system architecture that integrates the hotel database with the Google 
+Maps API for spatial visualization
+h. Implement features allowing users to interact with the map, view hotel locations, and 
+overlay additional data, such as rainfall information map etc.
+
+Task 5: To plot business related to tourism based on Google Maps data - Completed
+i. Photography
+j. Travel & Tours Company
+k. Food and Beverages (Cafe, restaurant etc)
+l. Bed and Breakfast
+m. Rental Service (Car, Bike, taxi etc)
+n. Souveniour Shop
+o. Taxi Business
