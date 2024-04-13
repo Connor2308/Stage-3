@@ -10,7 +10,7 @@ async function getWeatherInfo(lat, lon) { // of the current lat and long when th
   const apiKey = '06b3136375c0542ee73504cb381787b0'; //api key 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   
-  //we use try and catch for error handling just incase some invalid data is entered
+  //try and catch for error handling just incase some invalid data is entered
   try {
       const response = await fetch(apiUrl); //fetching weather data from the api for them coords
       const data = await response.json(); 
@@ -22,12 +22,12 @@ async function getWeatherInfo(lat, lon) { // of the current lat and long when th
 }
 
 async function initMap() {
-  // Request needed libraries.
+  //request needed libraries.
   const { Map, InfoWindow } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement} = await google.maps.importLibrary("marker");
-  // The location of kedah, malaysia for centering 
+  //the location of kedah, malaysia for centering 
   const malaysiaPosition = { lat: 5.903295974014964, lng: 100.39410459400102 };
-  // The map, centered at malaysia
+  //the map, centered at malaysia
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 8,
     center: malaysiaPosition,
