@@ -1,6 +1,6 @@
 <header class="header">
   <div class="title">
-    <a href="#" class="name">NAHRIM Decision Support System for Hotel Location in Malaysia</a>
+    <a href="#" class="name">NAHRIM DSS for Hotel Location in Malaysia</a>
   </div>
     <!-- <a href="#" class="logo-link"><img src="images/logonahrimwebsite.png" alt="Logo represents NAHRIM" class="logo"></a> -->
     <nav class="navbar">
