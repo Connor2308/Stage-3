@@ -30,13 +30,52 @@ async function initMap() {
   //the map, centered at malaysia
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 8,
+    heading: 0,
+    tilt: 180,
     center: malaysiaPosition,
-    mapId: "NAHRIM map",
+    mapId: "d0ef2690d61f11a3", //links to my custom map settings on the api settings
   });
+  //this bit is needed for creating windows
   const infoWindow = new google.maps.InfoWindow({
     content: "",
     disableAutoPan: true,
   });
+
+  //this is all from the google maps api doccumentation on map rotations https://developers.google.com/maps/documentation/javascript/webgl/tilt-rotation, i had to add the logs for testing
+  const buttons = [
+    ["Rotate Left", "rotate", 20, google.maps.ControlPosition.LEFT_CENTER],
+    ["Rotate Right", "rotate", -20, google.maps.ControlPosition.RIGHT_CENTER],
+    ["Tilt Down", "tilt", 20, google.maps.ControlPosition.TOP_CENTER],
+    ["Tilt Up", "tilt", -20, google.maps.ControlPosition.BOTTOM_CENTER],
+  ];
+
+  buttons.forEach(([text, mode, amount, position]) => {
+    const controlDiv = document.createElement("div");
+    const controlUI = document.createElement("button");
+
+    controlUI.classList.add("ui-button");
+    controlUI.innerText = `${text}`;
+    controlUI.addEventListener("click", () => {
+      adjustMap(mode, amount);
+    });
+    controlDiv.appendChild(controlUI);
+    map.controls[position].push(controlDiv);
+  });
+  const adjustMap = function (mode, amount) {
+    switch (mode) {
+      case "tilt":
+        map.setTilt(map.getTilt() + amount);
+        console.log("Tilt")
+        break;
+      case "rotate":
+        map.setHeading(map.getHeading() + amount);
+        console.log("Rotate")
+        break;
+      default:
+        break;
+    }
+  };
+  //end of rotation
 
   //getting rid of null hotel locations so it does not break
   const validHotels = hotelData.filter(hotel => hotel.lat !== null && hotel.lng !== null);
@@ -47,11 +86,11 @@ async function initMap() {
       position: {lat: hotel.lat, lng: hotel.lng },
       label: {
         text: hotel.name,
-        color: "black",
+        color: "Black",
         fontSize: "18px",
+        fontWeight: "900",
       },
-      map: map,
-      
+      map: map,      
     });
     marker.addListener("click", async () => { //activates when the marker is clicked
       const weatherData = await getWeatherInfo(hotel.lat, hotel.lng); // call the function from the top by putting the markers lat and long in
