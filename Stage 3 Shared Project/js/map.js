@@ -29,7 +29,7 @@ async function initMap() {
   const malaysiaPosition = { lat: 5.903295974014964, lng: 100.39410459400102 };
   //the map, centered at malaysia
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8,
+    zoom: 10,
     heading: 0,
     tilt: 180,
     center: malaysiaPosition,

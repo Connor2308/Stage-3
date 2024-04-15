@@ -1,6 +1,6 @@
 <?php
 require_once("config.php");
-//get all hotels
+//get all hotels  information
 $queryHotels = "SELECT * FROM hotelandhomestays";
 $resultHotels = $conn->query($queryHotels);
 ?>

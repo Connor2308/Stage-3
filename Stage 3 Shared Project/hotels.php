@@ -30,8 +30,8 @@ $resultHotels = $conn->query($queryHotels);
                     <th>Hotel Address</th>
                     <th>Region</th>
                     <th>Business Type</th>
-                    <th>Latitude</th>
-                    <th>Longitude</th>
+                    <!-- <th>Latitude</th>
+                    <th>Longitude</th> -->
                 </tr>
             <?php
             while ($obj = $resultHotels -> fetch_object()) {
@@ -41,8 +41,8 @@ $resultHotels = $conn->query($queryHotels);
             echo "<td><a>{$obj->street_address}</a></td>";
             echo "<td><a>{$obj->region}</a></td>";
             echo "<td><a>{$obj->business_type}</a></td>";
-            echo "<td><a>{$obj->latitude}</a></td>";
-            echo "<td><a>{$obj->longitude}</a></td>";
+            // echo "<td><a>{$obj->latitude}</a></td>";
+            // echo "<td><a>{$obj->longitude}</a></td>";
             echo "</tr>";
             }
             ?>
