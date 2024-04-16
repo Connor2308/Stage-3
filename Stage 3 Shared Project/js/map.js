@@ -107,4 +107,27 @@ async function initMap() {
   });
   const MarkerClusterer = new markerClusterer.MarkerClusterer({ markers, map })
 }
+
+function initAutocomplete(){
+  const input = document.getElementById("pac-input");
+  const SearchBox = new google.maps.places.SearchBox(input);
+
+  map.controls[google.maps.controlPosition.Top_Left].push(input);
+
+  map.addEventListener("bounds_changed", () => {
+    SearchBox.setBounds(map.getBound());
+  });
+
+  let markers[];
+  SearchBox.addlistener("place_changed), => {  
+    const places = SearchBox.getPlaces();
+      if(places.length == 0){
+        return;
+      }
+  markers.forEach((marker) =>{
+    marker.setMap(null);
+  });
+  markers = [];
+  }
+}
 initMap();
