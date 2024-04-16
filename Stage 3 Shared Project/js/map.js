@@ -1,6 +1,7 @@
 //https://developers.google.com/maps/documentation/javascript/marker-clustering?_gl=1*17b6z7x*_up*MQ..*_ga*MzgyNDQxNDM5LjE3MTI5MzM3NDU.*_ga_NRWSTWS78N*MTcxMjkzMzc0NC4xLjAuMTcxMjkzMzc0NC4wLjAuMA..#maps_marker_clustering-javascript
 //link above is a reference to the doccumentation that was used for developing this tool
 //https://openweathermap.org/current#data
+//https://developers.google.com/maps/documentation/javascript/examples/places-searchbox#maps_places_searchbox-css
 //here is the doccumentation for developing the weather system
 
 let map;
