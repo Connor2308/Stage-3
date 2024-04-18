@@ -20,7 +20,7 @@ $resultHotels = $conn->query($queryHotels);
 
 </head>
 <body>
-  <input id="pac_input" class="controls" type="text" placeholder="Search"/>
+  <input id="pac_input" class="controls" type="text" placeholder="Search Box"/>
     <div class="main"></div>
     <div id="map"></div>
     <?php
