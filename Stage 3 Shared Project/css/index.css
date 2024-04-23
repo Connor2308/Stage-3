@@ -67,7 +67,7 @@
 
 /* Footer */
 .footer{
-    position:relative;
+    position:fixed;
     bottom:0px;
     width:100%;
     height: auto;
