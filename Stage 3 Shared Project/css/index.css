@@ -22,18 +22,17 @@
     margin-top: -70px;
 }
 .header{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
+    height: auto;
     width: 100%;
-    padding: 20px 100px;
+    padding: 10px 100px;
     background: #1f2c67;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-
-    z-index: 20;
 }
 .title{
     flex: 1; 
@@ -66,45 +65,12 @@
     color: #ff7200; 
 }
 
-/* .Search{
-    margin-left: auto;
-}
-.srch{
-    font-family: 'Times New Roman';
-    width: 200px;
-    height: 40px;
-    background: white;
-    border: 2px solid #ff7200;
-    margin-top: 13px;
-    color: black;
-    margin-right: 10px;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-}
-.btn{
-    width: 100px;
-    height: 40px;
-    background: #ff7200;
-    border: 2px solid #ff7200;
-    margin-top: 13px;
-    color: #fff;
-    font-size: 15px;
-    border-radius: 5px;
-}
-.btn:focus{
-    outline: none;
-}
-.srch:focus{
-    outline: none;
-} */
-
-
 /* Footer */
 .footer{
-    position:fixed;
+    position:relative;
     bottom:0px;
     width:100%;
+    height: auto;
     background-color: #2C2E37;
     color: white;
     margin: 40px 0 0 0;
@@ -171,14 +137,12 @@ p{
 .table-container{
     display: flex;
     justify-content: center;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 table{
     width: 100%;
     max-width: 600px;
     min-width: 300px;
-    padding: 5%;
-    padding-top: 10%;
 }
   
 th,td{
@@ -200,4 +164,8 @@ tr:nth-child(odd) {
 .uc{
     text-transform: uppercase;
 }
-
+/* Search Hotels */
+.search-container{
+    text-align: center;
+    margin-top: 3%;
+}

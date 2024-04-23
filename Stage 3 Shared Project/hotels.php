@@ -1,7 +1,11 @@
 <?php
 require_once("config.php");
-//query to get all hotels
 $queryHotels = "SELECT * FROM hotelandhomestays";
+
+if(isset($_GET['query'])) {
+    $search = $_GET['query'];
+    $queryHotels = "SELECT * FROM hotelandhomestays WHERE hotel_name LIKE '%$search%'";
+}
 $resultHotels = $conn->query($queryHotels);
 ?>
 
@@ -19,8 +23,16 @@ $resultHotels = $conn->query($queryHotels);
     />
 </head>
 <body>
-    <?php include("includes/header.php")?>
+    <?php 
+    include("includes/header.php")
+    ?>
     <div class="main">
+        <div class="search-container">
+            <form method="GET">
+                <input type="text" name="query" placeholder="Search hotels...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
         <!-- Hotel Listing Here -->
         <div class="table-container">
             <table>
@@ -49,6 +61,8 @@ $resultHotels = $conn->query($queryHotels);
             </table>
         </div>
     </div>
-    <?php include("includes/footer.php")?>
+    <?php 
+    include("includes/footer.php")
+    ?>
 </body>
 </html>

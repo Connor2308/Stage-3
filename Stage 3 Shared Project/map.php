@@ -20,25 +20,25 @@ $resultHotels = $conn->query($queryHotels);
 
 </head>
 <body>
-  <input id="pac_input" class="controls" type="text" placeholder="Search Box"/>
-    <div class="main"></div>
-    <div id="map"></div>
-    <?php
-    echo "<script>";
-    echo "let hotelData = ["; //declaring hotel data variable
-    while ($row = $resultHotels->fetch_object()) {
-      $hotelName = $row->hotel_name;
-      $lat = $row->latitude;
-      $lng = $row->longitude;
-      $hId = $row->hotel_id;
-      echo "{ name: '$hotelName', lat: $lat, lng: $lng, hotelId: $hId},";
-    }
-    echo "];";
-    echo "</script>";
-    ?>
-    
-    <?php include("includes/header.php")?>
-    <?php include("includes/footer.php")?>
+  <?php include("includes/header.php")?>
+  <!-- <input id="pac_input" class="controls" type="text" placeholder="Search Box"/> -->
+  <div class="main"></div>
+  <div id="map"></div>
+  <?php
+  echo "<script>";
+  echo "let hotelData = ["; //declaring hotel data variable
+  while ($row = $resultHotels->fetch_object()) {
+    $hotelName = $row->hotel_name;
+    $lat = $row->latitude;
+    $lng = $row->longitude;
+    $hId = $row->hotel_id;
+    echo "{ name: '$hotelName', lat: $lat, lng: $lng, hotelId: $hId},";
+  }
+  echo "];";
+  echo "</script>";
+  ?>
+  
+  <?php include("includes/footer.php")?>
     
 </body>
 </html> 

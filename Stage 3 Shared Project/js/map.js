@@ -1,8 +1,8 @@
 //https://developers.google.com/maps/documentation/javascript/marker-clustering?_gl=1*17b6z7x*_up*MQ..*_ga*MzgyNDQxNDM5LjE3MTI5MzM3NDU.*_ga_NRWSTWS78N*MTcxMjkzMzc0NC4xLjAuMTcxMjkzMzc0NC4wLjAuMA..#maps_marker_clustering-javascript
 //link above is a reference to the doccumentation that was used for developing this tool
 //https://openweathermap.org/current#data
-//https://developers.google.com/maps/documentation/javascript/examples/places-searchbox#maps_places_searchbox-css
 //here is the doccumentation for developing the weather system
+//https://developers.google.com/maps/documentation/javascript/examples/places-searchbox#maps_places_searchbox-css
 
 let map;
 let markers = [];
@@ -97,7 +97,7 @@ async function initMap() {
       const weatherData = await getWeatherInfo(hotel.lat, hotel.lng); // call the function from the top by putting the markers lat and long in
       if (weatherData) {
         const temperatureCelsius = weatherData.main.temp;
-        const weatherInfo = `Hotel ID: ${hotel.hotelId}<br></br>Weather: ${weatherData.weather[0].description}, Temperature: ${temperatureCelsius.toFixed(2)}°C,`;
+        const weatherInfo = `Hotel ID: ${hotel.hotelId}<br></br>Weather: ${weatherData.weather[0].description}, Temperature: ${temperatureCelsius.toFixed(2)}°C.`;
         infoWindow.setContent(weatherInfo); //setting the content of the pop up window to the weather and temp
       } else { //error handling
         infoWindow.setContent('Failed to fetch weather data');
