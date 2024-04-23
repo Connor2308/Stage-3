@@ -37,8 +37,6 @@ $resultHotels = $conn->query($queryHotels);
   echo "];";
   echo "</script>";
   ?>
-  
-  <?php include("includes/footer.php")?>
     
 </body>
 </html> 
