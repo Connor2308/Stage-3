@@ -13,12 +13,12 @@ async function getWeatherInfo(lat, lon) { // of the current lat and long when th
   
   //try and catch for error handling just incase some invalid data is entered
   try {
-      const response = await fetch(apiUrl); //fetching weather data from the api for them coords
-      const data = await response.json(); 
-      return data; //returning data as the result of the function
+    const response = await fetch(apiUrl); //fetching weather data from the api for them coords
+    const data = await response.json(); 
+    return data; //returning data as the result of the function
   } catch (error) {
-      console.error('Error fetching weather data:', error);
-      return null; //error handling
+    console.error('Error fetching weather data:', error);
+    return null; //error handling
   }
 }
 
@@ -108,6 +108,7 @@ async function initMap() {
   });
   const MarkerClusterer = new markerClusterer.MarkerClusterer({ markers, map })
 
+  //search box
   // Create the search box and link it to the UI element.
   const input = document.getElementById("pac-input");
   const searchBox = new google.maps.places.SearchBox(input);
@@ -170,4 +171,5 @@ async function initMap() {
   });
 } 
 
+//run the function this is required by the api
 initMap();

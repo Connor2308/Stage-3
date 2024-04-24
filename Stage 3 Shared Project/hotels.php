@@ -2,12 +2,12 @@
 require_once("config.php");
 $queryHotels = "SELECT * FROM hotelandhomestays";
 
-//if they have searched then this if will happen
+//if they have pressed search then this if will happen 
 if(isset($_GET['search'])) {
   $search = $_GET['search'];
-  $queryHotels = "SELECT * FROM hotelandhomestays WHERE hotel_name LIKE '%$search%'";
+  $queryHotels = "SELECT * FROM hotelandhomestays WHERE hotel_name LIKE '%$search%'";//like gets searches rows for a similar result.
 }
-$resultHotels = $conn->query($queryHotels);
+$resultHotels =  mysqli_query($conn, $queryHotels);//we execute the query from above either the searhed one or the full query
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ include("includes/header.php")
         <button type="submit">Search</button>
       </form>
     </div>
-    <!-- Hotel Listing Here -->
+    <!-- Hotel Table -->
     <div class="table-container">
       <table>
         <tr>

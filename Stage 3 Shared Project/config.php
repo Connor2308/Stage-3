@@ -3,9 +3,10 @@
     $username = "root";
     $password = "";
     $dbname = "nahrim_schema";
-    // Connect to the db
+    //this establishes a connection to the database, conn will be our database connection variable
     $conn = new mysqli($servername, $username, $password, $dbname);
-    // Then check connection (Error handling to help us)
+    
+    //if there is an error in connection this will alert us
     if ($conn->connect_error){
         die("Connection failed: " . $conn->connect_error);
     }

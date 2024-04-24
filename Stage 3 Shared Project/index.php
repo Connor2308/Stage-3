@@ -1,3 +1,7 @@
+<?php 
+header("Location: map.php"); //redirect as this page is not used
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
